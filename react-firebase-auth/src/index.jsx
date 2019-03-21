@@ -12,6 +12,15 @@ function error() {
 }
 
 
+const firebaseConfig = {
+    apiKey: "AIzaSyAlNB6JFrIQQaxe3P3nKSXLWcqlQmNeqRQ",
+    authDomain: "czatozrod.firebaseapp.com",
+    databaseURL: "https://czatozrod.firebaseio.com",
+    projectId: "czatozrod",
+    storageBucket: "czatozrod.appspot.com",
+    messagingSenderId: "12032939607"
+  };
+
 const loginTemplate = undefined;
 const signInTemplate = undefined;
 
@@ -21,7 +30,7 @@ ReactDOM.render(
     loginTemplate={loginTemplate}
     signInTemplate={signInTemplate}
     facebookSettings="facebookSettings"
-    firebaseSettings="firebaseSettings"
+    firebaseConfig={firebaseConfig}
     onSuccess={success}
     onError={error}
   />,

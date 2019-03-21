@@ -5,6 +5,9 @@
     padding: 20px
 }
 
+.rfa-error-message{
+    color: red;
+}
 .rfa-default-sign-in-template__title{
     font-size: 30px;
     font-weight: bold;
