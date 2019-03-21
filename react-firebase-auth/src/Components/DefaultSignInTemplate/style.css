@@ -1,0 +1,26 @@
+.rfa-default-sign-in-template{
+    border: 1px solid silver;
+    margin: 10px auto 10px auto;
+    width: 300px;
+    padding: 20px
+}
+
+.rfa-default-sign-in-template__title{
+    font-size: 30px;
+    font-weight: bold;
+    padding:5px;
+}
+
+
+.rfa-default-sign-in-template__body{
+    display: table-row-group
+}
+
+.rfa-default-sign-in-template__row{
+    display: table-row;
+}
+
+.rfa-default-sign-in-template__cell{
+    display: table-cell;
+    padding: 0px 5px;
+}
