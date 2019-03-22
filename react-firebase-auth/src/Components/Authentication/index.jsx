@@ -19,12 +19,17 @@ class Authentication extends Component {
   }
   componentDidMount() {
     this.state.auth.onAuthStateChanged(firebaseUser => {
+      if(firebaseUser === null)
+      {
+        this.props.loggedOut();
+      }else{
+        this.props.loggedIn(firebaseUser);
+      }
       this.setState({ firebaseUser });
     });
   }
 
   onLogin = data => {
-
     const promise = this.state.auth.signInWithEmailAndPassword(
       data.login,
       data.password

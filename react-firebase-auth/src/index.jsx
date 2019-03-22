@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 import Authentication from "./Components/Authentication";
 import * as serviceWorker from "./serviceWorker";
 
-function success() {
-  alert("Success");
+function loggedIn(firebaseUser) {
+  alert("Zalogowany");
+  console.log(firebaseUser);
 }
 
-function error() {
-  alert("error");
+function loggedOut() {
+  alert("Niezalogowany");
 }
 
 
@@ -31,8 +32,8 @@ ReactDOM.render(
     signInTemplate={signInTemplate}
     facebookSettings="facebookSettings"
     firebaseConfig={firebaseConfig}
-    onSuccess={success}
-    onError={error}
+    loggedIn={loggedIn}
+    loggedOut={loggedOut}
   />,
   document.getElementById("root")
 );
