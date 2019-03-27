@@ -1,7 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Authentication from "./Components/Authentication";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+import { Authentication } from './lib';
+   
 
 function loggedIn(firebaseUser) {
   alert("Zalogowany");
@@ -11,7 +12,6 @@ function loggedIn(firebaseUser) {
 function loggedOut() {
   alert("Niezalogowany");
 }
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyAlNB6JFrIQQaxe3P3nKSXLWcqlQmNeqRQ",
@@ -26,17 +26,14 @@ const loginTemplate = undefined;
 const signInTemplate = undefined;
 
 
-ReactDOM.render(
-  <Authentication
+ReactDOM.render(<Authentication
     loginTemplate={loginTemplate}
     signInTemplate={signInTemplate}
     facebookSettings="facebookSettings"
     firebaseConfig={firebaseConfig}
     loggedIn={loggedIn}
     loggedOut={loggedOut}
-  />,
-  document.getElementById("root")
-);
+  />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

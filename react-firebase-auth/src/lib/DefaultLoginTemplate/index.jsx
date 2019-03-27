@@ -23,7 +23,7 @@ class loginTemplate extends Component {
       <div className="rfa-default-login-template__body">
         <div className="rfa-default-login-template__row">
           <div className="rfa-default-login-template__cell">
-            <label>Login:</label>
+            <label>!Login:</label>
           </div>
           <div className="rfa-default-login-template__cell">
             <input name="login" onChange={e => this.onChangeValue("login", e.target.value)} />
