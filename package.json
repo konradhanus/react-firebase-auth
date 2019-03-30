@@ -16,6 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rmdir /s dist && mkdir dist && npx babel src/lib --out-dir dist --copy-files",
+    "deploy": "react-scripts build && firebase deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
